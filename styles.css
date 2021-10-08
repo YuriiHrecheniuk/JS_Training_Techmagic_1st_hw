@@ -1,0 +1,17 @@
+:root {
+    --queue-item-size: 50px;
+}
+
+.queue-item {
+    width: var(--queue-item-size);
+    height: var(--queue-item-size);
+    border: 1px solid red;
+    background: green;
+    color: white;
+    text-align: center;
+}
+
+.message-onerror {
+    text-decoration: underline;
+    color: red;
+}
