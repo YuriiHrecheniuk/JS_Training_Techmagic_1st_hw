@@ -5,13 +5,31 @@
 .queue-item {
     width: var(--queue-item-size);
     height: var(--queue-item-size);
-    border: 1px solid red;
-    background: green;
-    color: white;
+    border: 2px solid #00CF91;
+    background: #7AB1FF;
+    color: #004156;
     text-align: center;
+    line-height: var(--queue-item-size);
 }
 
 .message-onerror {
     text-decoration: underline;
     color: red;
+}
+
+.main {
+    min-height: 100vh;
+    max-height: max-content;
+    margin: 0 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.plate {
+    margin: 20px 0;
+}
+
+.dequeue-btn {
+    float: right;
 }

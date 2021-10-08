@@ -6,17 +6,20 @@
     <title>JS Training (1st homework)</title>
 </head>
 <body>
-<div>
-    <form action="" id="enqueue-form">
-        <label for="input-field">Input the contents of the queue item:</label>
-        <input type="text" id="input-field" required>
-        <br>
-        <input type="submit" value="Enqueue" id="enqueue-btn">
-    </form>
-    <button id="dequeue-btn">Dequeue</button>
-</div>
-<div id="queue-view"></div>
-<p id="message" hidden>Queue is empty.</p>
+<main class="main">
+    <div class="queue-interaction">
+        <form action="" id="enqueue-form" class="plate">
+            <label for="input-field">Input the contents of the item to enqueue:</label>
+            <input type="text" id="input-field" required>
+            <input type="submit" value="Enqueue" id="enqueue-btn">
+        </form>
+        <button id="dequeue-btn" class="plate dequeue-btn">Dequeue</button>
+    </div>
+    <div>
+        <div id="queue-view"></div>
+        <p id="message" hidden>Queue is empty.</p>
+    </div>
+</main>
 <script src="app.js"></script>
 </body>
 </html>

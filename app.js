@@ -1,3 +1,5 @@
+const MY_AGE = 18;
+
 const enqueueForm = document.getElementById('enqueue-form');
 const inputField = enqueueForm.querySelector('#input-field');
 
@@ -14,6 +16,7 @@ if (!localStorage.getItem('queue')) {
   localQueue = [];
 
   message.hidden = false;
+  dequeueBtn.disabled = true;
 } else {
   localQueue = localStorage.getItem('queue').split(' ');
 
@@ -25,14 +28,18 @@ if (!localStorage.getItem('queue')) {
 enqueueForm.addEventListener('submit', event => {
   event.preventDefault();
 
-  const contents = inputField.value;
+  if (localQueue.length <= MY_AGE) {
+    const contents = inputField.value;
 
-  enqueue(contents);
-  localQueue.push(contents);
+    enqueue(contents);
+    localQueue.push(contents);
 
-  message.hidden = true;
-  inputField.value = '';
-  dequeueBtn.disabled = false;
+    message.hidden = true;
+    inputField.value = '';
+    dequeueBtn.disabled = false;
+  } else {
+    alert('Maximum items equals to 18 (I`m 18) :)')
+  }
 });
 
 dequeueBtn.addEventListener('click', dequeue);
